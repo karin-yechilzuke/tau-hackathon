@@ -4,8 +4,8 @@ import MapView, { Marker, Polyline } from 'react-native-maps';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const MapPage2 = () => {
-  const [source, setSource] = useState({ latitude: 32.11101733295508, longitude: 34.80647565185797, label: 'Origin' });
-  const [destination, setDestination] = useState({ latitude: 32.06117882345265, longitude: 34.77331257980913, label: 'Levinsky Market' });
+  const [source, setSource] = useState({ latitude: 32.11101733295508, longitude: 34.80647565185797, label: '' }); // Current Location
+  const [destination, setDestination] = useState({ latitude: 32.06117882345265, longitude: 34.77331257980913, label: '' }); // Levinsky Market
   const [footRoute, setFootRoute] = useState([]);
   const [distance, setDistance] = useState(0);
 
@@ -20,14 +20,12 @@ const MapPage2 = () => {
   };
 
   const calculateFootRoute = (source, destination) => {
-    // Perform your custom logic to calculate the walking route
-    // Here's a sample implementation using dummy coordinates
 
     // Calculate the distance between source and destination
     const distance = calculateDistance(source, destination);
 
     // Generate intermediary coordinates along the route
-    const numSteps = Math.ceil(distance / 100); // Adjust this value as needed
+    const numSteps = Math.ceil(distance / 100); 
     const footRoute = [];
 
     for (let i = 0; i <= numSteps; i++) {
@@ -40,8 +38,6 @@ const MapPage2 = () => {
   };
 
   const calculateDistance = (source, destination) => {
-    // Calculate the distance between two coordinates using a suitable algorithm
-    // Here's a sample implementation using the Haversine formula
 
     const radius = 6371; // Earth's radius in kilometers
     const lat1 = source.latitude;
@@ -73,13 +69,13 @@ const MapPage2 = () => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          placeholder="Origin"
+          placeholder="Navigate from"
           value={source.label}
           onChangeText={(text) => setSource({ ...source, label: text })}
         />
         <TextInput
           style={styles.input}
-          placeholder="Levinsky Market"
+          placeholder="Destination"
           value={destination.label}
           onChangeText={(text) => setDestination({ ...destination, label: text })}
         />
