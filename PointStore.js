@@ -15,7 +15,7 @@ const PointStore = () => {
     <Text style={{ fontSize: 18 ,textAlign: 'center' }}>
     Welcome to Point Store!</Text>
     <Text style={{ fontSize: 18 ,textAlign: 'center' }}>
-    Number of Current Points:235</Text>
+    Number of Current Points: 256</Text>
     <Table borderStyle={{ borderWidth: 2, 
         borderColor: '#c8e1ff' }}>
         <Row data={header} />
