@@ -6,7 +6,7 @@ const PointStore = () => {
   const header = ['Business', 'Number Of Points ']
   const data = [
       ['Yossi Falafel', 234],
-      ['Amit Dress shop', 563],
+      ['Amit Dress Shop', 563],
       ['Suzanna Nails', 123]
   ]
   return(
