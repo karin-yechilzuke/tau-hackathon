@@ -75,7 +75,7 @@ const HomePage = ({ navigation }) => {
       <View style={styles.headerContainer}>
         <Text style={styles.header}>♥ SMOOTH MOVE ♥</Text>
         <Text style={styles.header2}>  </Text>
-        <Text style={styles.header2}>Number of current points:</Text>
+        <Text style={styles.header2}>Number of Current Points:</Text>
         <Text style={styles.header3}>256</Text>
       </View>
       <View style={styles.buttonContainer}>
